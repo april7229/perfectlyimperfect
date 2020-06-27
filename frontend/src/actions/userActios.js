@@ -41,7 +41,7 @@ const register = (name, email, password) => async (dispatch) => {
     dispatch({ type: USER_REGISTER_SUCCESS, payload: data });
     Cookie.set('userInfo', JSON.stringify(data));
   } catch (error) {
-    dispatch({ type: USER_REGISTER_FAIL, p"a"yload: error.message });
+    dispatch({ type: USER_REGISTER_FAIL, payload: error.message });
   }
 }
 
